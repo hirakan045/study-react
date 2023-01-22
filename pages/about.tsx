@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { Links } from '@/compornents/Links'
+import Headline from '@/compornents/Headline'
+import Page from '@/compornents/Page'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,10 +20,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
+          <Page page="about" />
           <div>
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -40,10 +39,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-
-        <div className={styles.center}>
-          <h1>About Page</h1>
-        </div>
+        <Headline title="About Page" />
         <Links />
       </main>
     </>
